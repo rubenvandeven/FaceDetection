@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<title>HTML5 Webcam Face Detection</title>
+	<link rel='stylesheet' type='text/css' href='detection.css' />
+
+	<script type="text/javascript" src="scripts/ccv.js"></script>
+	<script type="text/javascript" src="scripts/face.js"></script>
+	<script src='scripts/detection.js'></script>
+
+</head>
+<body>
+
+	<div id='content'>
+		<h1>Webcam face detection using a HTML5 canvas</h1>
+		<div class='media'>
+			<video id='v' autoplay></video>	
+			<canvas id='c'></canvas>
+		</div>
+   		<div id="timer">.</div>
+		<div class='actions'>
+			<a href='#' onclick='filterCam();'>Reset</a>
+			<a href='#' onclick='filterCam("rect");'>Rectangle</a>
+			<a href='#' onclick='filterCam("glasses");'>Glasses</a>
+		</div>
+		<footer>
+			<p>Please read <a href='http://blog.rubenvandeven.com/webcam-face-detection-using-a-html5-canvas'>my article</a> on this code, which is based on work from <a href='http://www.iandevlin.com/blog/2012/06/html5/filtering-a-webcam-using-getusermedia-and-html5-canvas'>Ian Devlin</a> and <a href="http://wesbos.com/html5-video-face-detection-canvas-javascript/">Wes Bos</a>.
+			<p>This demo requires a browser that supports the <code>getUserMedia</code> API such as Opera 12.</p>
+		</footer>
+	</div>
+
+</body>
+</html>
